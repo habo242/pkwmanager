@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Marke:</strong>
+  <%= @pkw.marke %>
+</p>
+
+<p>
+  <strong>Modell:</strong>
+  <%= @pkw.modell %>
+</p>
+
+<p>
+  <strong>Kilometerstand:</strong>
+  <%= @pkw.kilometerstand %>
+</p>
+
+<p>
+  <strong>Tüv:</strong>
+  <%= @pkw.tüv %>
+</p>
+
+<%= link_to 'Edit', edit_pkw_path(@pkw) %> |
+<%= link_to 'Back', pkws_path %>

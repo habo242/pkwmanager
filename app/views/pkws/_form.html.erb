@@ -1,0 +1,33 @@
+<%= form_for(@pkw) do |f| %>
+  <% if @pkw.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pkw.errors.count, "error") %> prohibited this pkw from being saved:</h2>
+
+      <ul>
+      <% @pkw.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :marke %><br>
+    <%= f.text_field :marke %>
+  </div>
+  <div class="field">
+    <%= f.label :modell %><br>
+    <%= f.text_field :modell %>
+  </div>
+  <div class="field">
+    <%= f.label :kilometerstand %><br>
+    <%= f.number_field :kilometerstand %>
+  </div>
+  <div class="field">
+    <%= f.label :tüv %><br>
+    <%= f.check_box :tüv %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

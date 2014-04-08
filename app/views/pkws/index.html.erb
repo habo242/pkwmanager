@@ -1,0 +1,33 @@
+<h1>Listing pkws</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Marke</th>
+      <th>Modell</th>
+      <th>Kilometerstand</th>
+      <th>Tüv</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pkws.each do |pkw| %>
+      <tr>
+        <td><%= pkw.marke %></td>
+        <td><%= pkw.modell %></td>
+        <td><%= pkw.kilometerstand %></td>
+        <td><%= pkw.tüv %></td>
+        <td><%= link_to 'Show', pkw %></td>
+        <td><%= link_to 'Edit', edit_pkw_path(pkw) %></td>
+        <td><%= link_to 'Destroy', pkw, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pkw', new_pkw_path %>

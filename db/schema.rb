@@ -11,13 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140408102319) do
+ActiveRecord::Schema.define(version: 20140425131758) do
 
-  create_table "pkws", force: true do |t|
-    t.string   "marke"
-    t.string   "modell"
-    t.integer  "kilometerstand"
-    t.boolean  "tüv"
+  create_table "cars", force: true do |t|
+    t.string   "marque"
+    t.string   "model"
+    t.integer  "milage"
+    t.boolean  "MOT"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

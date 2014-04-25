@@ -1,2 +1,2 @@
-class Pkw < ActiveRecord::Base
+class Car < ActiveRecord::Base
 end

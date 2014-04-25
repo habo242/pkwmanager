@@ -1,74 +1,74 @@
-class PkwsController < ApplicationController
-  before_action :set_pkw, only: [:show, :edit, :update, :destroy]
+class carsController < ApplicationController
+  before_action :set_car, only: [:show, :edit, :update, :destroy]
 
-  # GET /pkws
-  # GET /pkws.json
+  # GET /cars
+  # GET /cars.json
   def index
-    @pkws = Pkw.all
+    @car = Car.all
   end
 
-  # GET /pkws/1
-  # GET /pkws/1.json
+  # GET /cars/1
+  # GET /cars/1.json
   def show
   end
 
-  # GET /pkws/new
+  # GET /cars/new
   def new
-    @pkw = Pkw.new
+    @car = Car.new
   end
 
-  # GET /pkws/1/edit
+  # GET /cars/1/edit
   def edit
   end
 
-  # POST /pkws
-  # POST /pkws.json
+  # POST /cars
+  # POST /cars.json
   def create
-    @pkw = Pkw.new(pkw_params)
+    @car = Car.new(car_params)
 
     respond_to do |format|
-      if @pkw.save
-        format.html { redirect_to @pkw, notice: 'Pkw was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @pkw }
+      if @car.save
+        format.html { redirect_to @car, notice: 'car was successfully created.' }
+        format.json { render action: 'show', status: :created, location: @car }
       else
         format.html { render action: 'new' }
-        format.json { render json: @pkw.errors, status: :unprocessable_entity }
+        format.json { render json: @car.errors, status: :unprocessable_entity }
       end
     end
   end
 
-  # PATCH/PUT /pkws/1
-  # PATCH/PUT /pkws/1.json
+  # PATCH/PUT /cars/1
+  # PATCH/PUT /cars/1.json
   def update
     respond_to do |format|
-      if @pkw.update(pkw_params)
-        format.html { redirect_to @pkw, notice: 'Pkw was successfully updated.' }
+      if @car.update(car_params)
+        format.html { redirect_to @car, notice: 'car was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
-        format.json { render json: @pkw.errors, status: :unprocessable_entity }
+        format.json { render json: @car.errors, status: :unprocessable_entity }
       end
     end
   end
 
-  # DELETE /pkws/1
-  # DELETE /pkws/1.json
+  # DELETE /cars/1
+  # DELETE /cars/1.json
   def destroy
-    @pkw.destroy
+    @car.destroy
     respond_to do |format|
-      format.html { redirect_to pkws_url }
+      format.html { redirect_to cars_url }
       format.json { head :no_content }
     end
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_pkw
-      @pkw = Pkw.find(params[:id])
+    def set_car
+      @car = car.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def pkw_params
-      params.require(:pkw).permit(:marke, :modell, :kilometerstand, :tüv)
+    def car_params
+      params.require(:car).permit(:marke, :modell, :kilometerstand, :tüv)
     end
 end

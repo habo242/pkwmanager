@@ -1,12 +1,12 @@
-<h1>Listing pkws</h1>
+<h1>Listing cars</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Marke</th>
-      <th>Modell</th>
-      <th>Kilometerstand</th>
-      <th>Tüv</th>
+      <th>Marque</th>
+      <th>Model</th>
+      <th>Milage</th>
+      <th>MOT</th>
       <th></th>
       <th></th>
       <th></th>
@@ -14,15 +14,15 @@
   </thead>
 
   <tbody>
-    <% @pkws.each do |pkw| %>
+    <% @cars.each do |car| %>
       <tr>
-        <td><%= pkw.marke %></td>
-        <td><%= pkw.modell %></td>
-        <td><%= pkw.kilometerstand %></td>
-        <td><%= pkw.tüv %></td>
-        <td><%= link_to 'Show', pkw %></td>
-        <td><%= link_to 'Edit', edit_pkw_path(pkw) %></td>
-        <td><%= link_to 'Destroy', pkw, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= car.marke %></td>
+        <td><%= car.modell %></td>
+        <td><%= car.kilometerstand %></td>
+        <td><%= car.tüv %></td>
+        <td><%= link_to 'Show', car %></td>
+        <td><%= link_to 'Edit', edit_car_path(car) %></td>
+        <td><%= link_to 'Destroy', car, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Pkw', new_pkw_path %>
+<%= link_to 'New car', new_car_path %>

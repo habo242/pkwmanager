@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140426124051) do
+ActiveRecord::Schema.define(version: 20140426130540) do
 
   create_table "cars", force: true do |t|
     t.string   "marque"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20140426124051) do
     t.boolean  "MOT"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "manufactor"
   end
 
 end

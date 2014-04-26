@@ -14,12 +14,12 @@
   </thead>
 
   <tbody>
-    <% @cars.each do |car| %>
+    <% @car.each do |car| %>
       <tr>
         <td><%= car.marke %></td>
-        <td><%= car.modell %></td>
-        <td><%= car.kilometerstand %></td>
-        <td><%= car.tüv %></td>
+        <td><%= car.model %></td>
+        <td><%= car.milage %></td>
+        <td><%= car.MOT %></td>
         <td><%= link_to 'Show', car %></td>
         <td><%= link_to 'Edit', edit_car_path(car) %></td>
         <td><%= link_to 'Destroy', car, method: :delete, data: { confirm: 'Are you sure?' } %></td>

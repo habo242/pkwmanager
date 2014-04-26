@@ -14,7 +14,7 @@
 ActiveRecord::Schema.define(version: 20140425131758) do
 
   create_table "cars", force: true do |t|
-    t.string   "marque"
+    t.string   "marke"
     t.string   "model"
     t.integer  "milage"
     t.boolean  "MOT"

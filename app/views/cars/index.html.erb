@@ -3,6 +3,7 @@
 <table>
   <thead>
     <tr>
+      <th>Manufactor/</th>
       <th>Marque</th>
       <th>Model</th>
       <th>Milage</th>
@@ -14,8 +15,15 @@
   </thead>
 
   <tbody>
-    <% @car.each do |car| %>
+    <% @cars.each do |car| %>
       <tr>
+
+        <td><select name="post[cars_id]">
+  <option value="" selected="selected">None</option>
+  <option value="1"><%= car.manufactor %></option>
+  <option value="2">Sam</option>
+  <option value="3">Tobias</option>
+</select></td>
         <td><%= car.marque %></td>
         <td><%= car.model %></td>
         <td><%= car.milage %></td>

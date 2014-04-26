@@ -11,10 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140425131758) do
+ActiveRecord::Schema.define(version: 20140426124051) do
 
   create_table "cars", force: true do |t|
-    t.string   "marke"
+    t.string   "marque"
     t.string   "model"
     t.integer  "milage"
     t.boolean  "MOT"

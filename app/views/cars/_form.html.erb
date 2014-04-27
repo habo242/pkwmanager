@@ -13,7 +13,9 @@
 
   <div class="field">
     <%=f.label :manufactor %><br>
-     <%= f.select :manufactor, Car::MANUFACTOR, prompt: "Please select" %><br />
+     <%= f.select :manufactor_id,
+     Manufactor.all.map { |d| [d.manufactor,d.id]},
+     prompt: "Please select" %>
   </div>
 
   <div class="field">

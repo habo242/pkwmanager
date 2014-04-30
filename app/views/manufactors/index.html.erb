@@ -1,4 +1,4 @@
-<h1>Listing manufactors</h1>
+<h1>Listing Manufactors</h1>
 
 <table>
   <thead>
@@ -9,6 +9,10 @@
   </thead>
 
   <tbody>
+      <ul class="nav nav-pills">
+  <li><a href="cars">Cars</a></li>
+  <li class="active"><a href="manufactors">Manufactors</a></li>
+</ul>
     <% @manufactors.each do |manufactor| %>
       <tr>
         <td><%= manufactor.manufactor %></td>

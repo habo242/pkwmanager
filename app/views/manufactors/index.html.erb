@@ -20,7 +20,7 @@
         <td><%= manufactor.manufactor %></td>
         <td><%= link_to 'Show', manufactor ,:class=>"btn btn-primary" %></td>
         <td><%= link_to 'Edit', edit_manufactor_path(manufactor),:class=>"btn btn-primary" %></td>
-        <td><%= link_to 'Destroy', manufactor,:class=>"btn btn-primary", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', manufactor,:class=>"btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Manufactor', new_manufactor_path,:class=>"btn btn-primary" %>
+<%= link_to 'New Manufactor', new_manufactor_path,:class=>"btn btn-success" %>

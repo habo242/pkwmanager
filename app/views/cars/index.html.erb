@@ -22,7 +22,6 @@
 
     <% @cars.each do |car| %>
 
-
       <tr>
         <td><%= car.manufactor %></td>
         <td><%= car.marque %></td>
@@ -31,7 +30,7 @@
         <td><%= car.MOT %></td>
         <td><%= link_to 'Show', car,:class=>"btn btn-primary" %></td>
         <td><%= link_to 'Edit', edit_car_path(car),:class=>"btn btn-primary" %></td>
-        <td><%= link_to 'Destroy', car,:class=>"btn btn-primary", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', car,:class=>"btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
 
     <%end%>
@@ -40,4 +39,4 @@
 
 <br>
 
-<%= link_to 'New car', new_car_path,:class=>"btn btn-primary" %>
+<%= link_to 'New car', new_car_path,:class=>"btn btn-success" %>

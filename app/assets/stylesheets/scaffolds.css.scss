@@ -85,5 +85,9 @@ div {
     font-size: 12px;
     list-style: square;
   }
+  .navbar .in .nav li {
+     display: block;
+     float: none;
+     width:100%;}
 
 }

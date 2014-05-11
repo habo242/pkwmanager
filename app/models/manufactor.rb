@@ -1,3 +1,3 @@
 class Manufactor < ActiveRecord::Base
-  has_many :cars
+  belongs_to :car
 end

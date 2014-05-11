@@ -13,8 +13,8 @@
 
   <div class="field">
     <%=f.label :manufactor %><br>
-     <%= f.select :manufactor_id,
-     Manufactor.all.map { |d| [d.manufactor,d.id]},
+     <%= f.select :manufactor,
+     Manufactor.all.map { |d| [d.manufactor]},
      prompt: "Please select" %>
   </div>
 
